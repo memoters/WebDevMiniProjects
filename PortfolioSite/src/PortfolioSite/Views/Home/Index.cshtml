@@ -1,0 +1,87 @@
+﻿@*@model IEnumerable<PortfolioSite.Models.ProjectDetails>*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section scripts{
+
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+    <script src="~/js/app-projects.js"></script>
+    <script src="~/js/projectsController.js"></script>
+}
+
+<div class="row">    
+    <div class="container overviewStyle dropShadow">
+        <div class="col-md-4" id="leftSideText">
+            <h2>About me</h2>
+            <div>
+                @* Experience goes here *@
+                <p>Software Engineer based in Sydney, Australia.</p>
+                <p>Web and Windows desktop applications developer.</p>
+                <p>Experienced in full software development life cycle including software documentation, engineering, and testing.</p>
+            </div>
+        </div>
+        <div class="col-md-7" id="rightSideDisplay">
+            <div>
+                <h3>
+                    <i class="fa fa-code fa-1x" aria-hidden="true"></i> Tools and Languages
+                </h3>
+            </div>
+            <div id="toolsLanguagesDiv">
+                <p>
+                    ASP.NET MVC / ASP.NET Core MVC / Entity Framework / WebAPI / SignalR
+                </p>
+                <p>
+                    Microsoft C# (WPF, WCF) / Visual C++ MFC / Visual Basic
+                </p>
+                <p>
+                    HTML5 / CSS3 / Javascript
+                </p>
+                <p>
+                    SQL Server / Oracle
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Angular implementation of loading projects-->
+<section id="projects-section">
+    <div class="row" ng-app="app-projects">
+        <div ng-view></div>
+    </div>
+</section>
+
+<section id="contact-section">
+    <div class="row">
+        <h3>Contact Me</h3>
+        <address>
+            <strong>Email:</strong> <a href="mailto:joe.nonato.iii@gmail.com">joe.nonato.iii@gmail.com</a><br />
+        </address>
+
+    </div>
+    <div class="col-md-12">
+        <h4>Social Networks</h4>
+        <ul>
+            <li>
+                <a href="https://au.linkedin.com/in/joenonatoiii" class="button social" target="_blank">
+                    <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/jnonatoiii" target="_blank" class="button social">
+                    <i class="fa fa-fw fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/memoters" class="button social" target="_blank">
+                    <i class="fa fa-fw fa-github"></i>
+                </a>
+            </li>
+        </ul>
+        <br />
+        <br />
+    </div>
+</section>
+
